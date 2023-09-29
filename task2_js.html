@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS-TASK-2</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    />
+    <script>
+      function Sort() {
+        var x = document.getElementById("inptxt").value;
+        document.getElementById("result").textContent = x
+          .split("")
+          .sort()
+          .join("");
+      }
+      function Reset() {
+        document.getElementById("inptxt").value = "";
+        document.getElementById("result").textContent = "";
+      }
+    </script>
+  </head>
+  <body>
+    <center>
+      <h4 class="text-info m-2">String in Alphabetically Sorted Order</h4>
+      <b>Enter String :</b> <input type="text" id="inptxt" />
+      <div>
+        <button onclick="Sort()" class="bg-danger mt-2">Submit</button>
+        <button onclick="Reset()" class="bg-warning text-dark mt-2">
+          Reset</button
+        ><br /><br />
+      </div>
+      <b>Result :</b> <span id="result" class="text-success fw-bolder"></span>
+    </center>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS-TASK-1</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    />
+    <script>
+      function Reverse() {
+        var x = parseInt(document.getElementById("inpnum").value);
+        var rev = 0;
+        while (x > 0) {
+          rev = rev * 10 + (x % 10);
+          x = parseInt(x / 10);
+        }
+        document.getElementById("result").textContent = rev.toString();
+      }
+
+      function Reset() {
+        document.getElementById("inpnum").value = "";
+        document.getElementById("result").textContent = "";
+      }
+    </script>
+  </head>
+  <body>
+    <center>
+      <h2 class="text-info m-2">Reverse a Number</h2>
+      <b>Enter a Number :</b>
+      <input type="number" id="inpnum" class="text-success" />
+      <div>
+        <button onclick="Reverse()" class="bg-danger mt-2">Submit</button>
+        <button onclick="Reset()" class="bg-warning text-dark mt-2">
+          Reset</button
+        ><br /><br />
+      </div>
+      <b>Result :</b> <span id="result" class="text-success fw-bolder"></span>
+    </center>
+  </body>
+</html>
